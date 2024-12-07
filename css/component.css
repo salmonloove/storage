@@ -1,0 +1,55 @@
+/************* #container *************/
+/************* #container *************/
+/* 모든 .main-memo 공통 속성 */
+.main-memo{
+    position: relative;
+}
+@keyframes opacity_move{
+    0%{
+        transform: translateY(0);
+        opacity: .3;
+        /* filter: blur(0px); */
+    }
+    100%{
+        transform: translateY(-10%);
+        opacity: 1;
+        /* filter: blur(10px); */
+    }
+}
+/* .memo-txts */
+.memo-txt{
+    width:362px;
+    height:200px;
+    position: absolute;
+    right:400px;
+    bottom: 500px;
+    background: url(../images/memo1-notxt.png) no-repeat center / cover;
+    padding:75px;
+    font-weight:bold;
+    font-size: 18px;
+    animation: opacity_move 3s infinite ease-in-out alternate;
+}
+.memo-txt::before{
+    content: "";
+    display: inline-block;
+    width:12px;
+    height:12px;
+    background: url(../images/ex-star-b.png);
+    position: absolute;
+    left:50px;
+    top:100px;
+    opacity: 0.4;
+}
+.memo-txt span{
+    font-weight:normal;
+    font-size: 16px;
+}
+
+/* .memo-img */
+.memo-img{
+    position: absolute;
+    right:-200px;
+    bottom: 0;
+    animation: opacity_move 3s infinite ease-in-out alternate;
+}
+/* 모든 .main-memo 공통 속성(end) */
