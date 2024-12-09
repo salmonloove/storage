@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXON PC방</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+
+    <header>
+        <div class="container flex">
+            <h1><a onClick="window.location.reload()" style="cursor: pointer;"><img src="./images/logo.gif" alt=""></a></h1>
+                <nav>
+                    <ul class="flex" id="quick">
+                        <li><a href="#">MY PC방</a>
+                        </li>
+                        <li><a href="#">상품과 결제</a>
+                        </li>
+                        <li><a href="#">이벤트</a>
+                        </li>
+                        <li><a href="#">고객센터</a>
+                        </li>
+                    </ul>
+                </nav>
+        </div>
+    </header>
+        <div class="container wrap flex">
+            <main class="flex">
+                <div class="goods"></div>
+                <div class="pay"></div>
+                <div class="game"></div>
+                <div class="event"></div>
+                <div class="notice wid2">
+                    <button class="detailbutton">+</button>
+                    <div class="detail">
+                        <h2>공지사항</h2>
+                        <ul>
+                            <li><a href="#">프리미엄 플러스 서비스 안내</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>2024-05-28</span></li>
+                            <li><a href="#">[수정] 06/27(목) 테일즈위버 PC방 상용화 안내</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>2024-06-20</span></li>
+                            <li><a href="#">[수정] 07/04(목) 넥슨PC방 서비스 게임 정기점검..</a>&nbsp;&nbsp;&nbsp;&nbsp;<span>2024-07-03</span></li>
+                            <li><a href="#">2024년 2분기(4월~6월) 세금계산서 수정가능기..</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>2024-07-01</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ip"></div>
+                <div class="refund"></div>
+                <div class="tax"></div>
+                <div class="cs wid2"></div>
+                <div class="remote"></div>
+            </main>
+            <aside>
+                <form acrtion="">
+                    <div class="input flex">
+                        <div class="input text">
+                                <input class="id" type="text" placeholder="아이디 입력" onfocus="this.placeholder=''" onblur="this.placeholder='아이디 입력'">
+                                <input class="beburn" type="password" placeholder="비밀번호 입력" onfocus="this.placeholder=''"  onblur="this.placeholder='비밀번호 입력'">
+                        </div>
+                        <!--onfocus를 사용하여 특정 텍스트박스를 클릭하면 적혀있던 placeholder 값을 지울 수 있다 또한 onblur를 통해 다른 곳을 클릭하면 placeholder값을 다시 표시할 수 있다-->
+                        <div class="btn">
+                            <input type="submit" value="로그인"><!--버튼에서는 value로 값을 변경-->
+                        </div>
+                    </div>
+                    <div class="gnb flex">
+                        <ul class="check flex">
+                            <li>
+                                <input type="checkbox" id="">
+                                <label for=""><span class="bold">my pc방</span> 바로가기</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="">
+                                <label for="">아이디 저장</label>
+                            </li>
+                        </ul>
+                        <ul class="info flex">
+                            <li class="bold"><a href="">회원가입</a></li><span>|</span>
+                            <li><a href="">아이디 찾기</a></li><span>|</span>
+                            <li><a href="">비밀번호 찾기</a></li>         
+                        </ul>
+                    </div>
+                </form>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide"></div>
+                      <div class="swiper-slide"></div>
+                      <div class="swiper-slide"></div>
+                      <div class="swiper-slide"></div>
+                      <div class="swiper-slide"></div>
+                      <div class="swiper-slide"></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+            </aside>
+        </div>
+        <div class="footer">
+            <footer>
+                <div class="fo-logo">
+                    <img src="./images/footer_logo.png" alt="">
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">서비스운영정책</a></li>
+                        <li><a href="#">서비스이용약관</a></li>
+                        <li><a href="#">사이트맵</a></li>
+                    </ul>
+                    <div>
+                        <div>
+                            <p>
+                                경기도 성남시 분당구 판교로 256번길 7 통신판매업 신고번호 제2013-경기성남-1659호사업자정보확인<br \>
+                                (주)넥슨코리아 대표이사 강대현∙김정욱 공정위 고시 제2000-1호에 따른 사업자 등록번호 안내 220-87-17483호<br \> <br \>
+                                Copyright © NEXON Korea Corporation All Rights Reserved.
+                            </p>
+                        </div>
+                        <div class="site">
+                            <select name="site" id="site-select">
+                                <option value="">넥슨게임사이트</option>
+                                <option value="검은사막">검은사막</option>
+                                <option value="넥슨닷컴">넥슨닷컴</option>
+                                <option value="던전앤파이터">던전앤파이터</option>
+                                <option value="로스트사가">로스트사가</option>
+                                <option value="마비노기">마비노기</option>
+                                <option value="마비노기 영웅전">마비노기 영웅전</option>
+                                <option value="메이플스토리">메이플스토리</option>
+                                <option value="메이플스토리2">메이플스토리2</option>
+                                <option value="바람의나라">바람의나라</option>
+                                <option value="버블파이터">버블파이터</option>
+                                <option value="사이퍼즈">사이퍼즈</option>
+                                <option value="서든어택">서든어택</option>
+                                <option value="슈퍼바이브">슈퍼바이브</option>
+                                <option value="아키에이지">아키에이지</option>
+                                <option value="엘소드">엘소드</option>
+                                <option value="이터널리턴">이터널리턴</option>
+                                <option value="카운터-스트라이크 온라인">카운터-스트라이크 온라인</option>
+                                <option value="카트라이더: 드리프트">카트라이더: 드리프트</option>
+                                <option value="크레이지아케이드">크레이지아케이드</option>
+                                <option value="클로저스">클로저스</option>
+                                <option value="테일즈위버">테일즈위버</option>
+                                <option value="프리스타일">프리스타일</option>
+                                <option value="프리스타일2">프리스타일2</option>
+                                <option value="프리스타일풋볼Z">프리스타일풋볼Z</option>
+                                <option value="FC Online">FC Online</option>
+                                <option value="PUBG:배틀그라운드 on Steam">PUBG:배틀그라운드 on Steam</option>
+                            </select>
+                            <button><a href="#">이동</a></button>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+</html>

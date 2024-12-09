@@ -1,0 +1,214 @@
+body{
+    width:100%;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+h1{
+    right:200px; 
+    transform: skewX();
+}
+h1 img{width: 200px;}
+figure .video{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+figure.video video{
+    width: 100%;
+    min-width: 1680px;
+}
+header { 
+    position: fixed;
+    height: 100%;
+    width:800px;
+    left: -700px;
+    top: 0;
+    background-image: linear-gradient(to right top, #fbff03, #fbff03, #eeff03, #00ff9d, #00f7ff);
+    transform: skew(-40deg);
+    }
+header img {
+    transform: skewX(40deg);
+    margin-left: 45%;
+    margin-top: -5%;
+}
+    /*부모 header를 skew해서 nav를 왼쪽에서 오른쪽으로 배치하기 위해*/
+    nav{
+            z-index: 99;
+            position: absolute;
+            /*border: 1px solid #82d3d6;*/
+            right:0;
+            top:150px;
+            width:200px;
+    }
+    /*a는 inline 요소에서 width:100% 아니다. hover 시 전체영역에 배경색이 적용되지 않기 때문에*/
+    nav a {
+        display: block;
+        font-size: 18px;
+    }
+    /*부모  a와 영역이 hover skew 되어 있어 좋으나 글자까지 기울여져서 b로 쌓았으나 inline요소는 transform적용이 안된다*/
+    nav b {
+        display: block;
+        font-weight: normal;    
+        transform: skew(40deg);
+    }
+    li.main-menu{
+        position: relative;
+        list-style: none;
+    }
+    /*메인메뉴에 있는 a 값만(서브 메뉴 a는 제외)*/
+    li.main-menu > a {
+        padding:10px;
+        text-align: left; 
+        border-bottom: 1px solid rgba(255,255,255,.2);
+        text-decoration: none;
+        color:black;
+    }
+    li.main-menu:hover > a {
+        background: #000; 
+        color:#fff; 
+        font-weight: bold;
+    }
+    ul.sub-menu{
+        position: absolute; 
+        width: 100%; 
+        background: rgba(255,255,255,.5); 
+        left: 149px; 
+        top:0; 
+        display: none;
+        list-style: none;
+    }
+    li.main-menu:hover a{background:#00ccff;}
+    li.main-menu:hover ul.sub-menu{display:block;}
+    ul.sub-menu li a{
+        padding: 5px 10px 5px 20px;
+        text-decoration: none;
+        color:black;
+        text-align: center;
+    }
+    ul.sub-menu li:hover a {
+        background: #555; 
+        color: #fff;
+    }
+    .btn{
+    position: absolute;
+    bottom: 10px;
+    /*right:100px;*/
+    font-size: 80px;
+    color: #5810e3;
+    width: 200px;
+    height: 100px;
+    left: -30px;
+    transform: skewX(40deg);
+    transition: .35s;
+}
+.btn i:nth-child(1){animation-delay: 0s;}
+.btn i:nth-child(2){animation-delay: .5s;}
+.btn i:nth-child(3){animation-delay: 1s;}
+.btn i {
+    position: absolute;
+    animation: btn-ani 1.5s linear infinite;
+}
+@keyframes btn-ani {
+    from {
+        opacity: 0;
+        left: 0;
+        transform: scale(.8);
+    }
+    to {
+        opacity: 1;
+        left: 150px;
+        transform: scale(1);
+    }
+}
+.item {
+    position: absolute;
+    left:-40%;
+    transform: skewX(40deg);
+    /*bottom: 10%;*/
+    bottom:0;
+    animation: wobble-hor-bottom 2s infinite;
+}
+.item  img{transform: skewX(40deg);}
+aside {
+    position: fixed;
+    right: -800px;
+    bottom: 0;
+    width: 800px;
+    height: 100%;
+    background-image: linear-gradient(to right top, #0105ff, #0099ff, #07b9ff, #02eeff, #0051ff);
+    transform: skew(-40deg);
+    transition: .35s;
+    /*cursor: pointer;*/
+}
+.brand {
+    position: absolute;
+    left:100%;
+    width:100%;
+    height: 100%;
+    transition: .35s;
+    background-color: rgba(0, 0, 0, 1);
+}
+aside:hover {right:-600px;}
+aside:hover .brand {left: 5%;}
+aside:hover .btn{left: 100%;}
+aside:hover .item{opacity: 0;}
+aside:hover .brand ul li {transform: translateX(0px);}
+.brand ul {
+    position:absolute;
+    bottom: 40px;
+    left: 40px;
+    cursor: pointer;
+}
+figure.banner {
+    border: 1px solid #b289e9;
+    overflow: hidden;
+}
+aside:hover .brand ul li:nth-child(1) {
+    transition-delay: .5s;
+}
+aside:hover .brand ul li:nth-child(2) {
+    transition-delay: .8s;
+}
+aside:hover .brand ul li:nth-child(3) {
+    transition-delay: 1.2s;
+}
+.brand ul li {
+    transition: .35s;
+    transform: translateX(600px);
+}
+.brand ul li img {
+    vertical-align: top;
+    height: 70px;
+    border: 1px solid #fff;
+    transform: skewX(40deg) scale(1.5);
+}
+.brand h3{
+    color: #fff;
+    padding: 10px;
+    transform: skewX(40deg);
+}
+
+
+@keyframes wobble-hor-bottom {
+    0%,
+    100% {
+              transform: translateX(0%);
+              transform-origin: 50% 50%;
+    }
+    15% {
+              transform: translateX(-30px) rotate(-6deg);
+    }
+    30% {
+              transform: translateX(15px) rotate(6deg);
+    }
+    45% {
+              transform: translateX(-15px) rotate(-3.6deg);
+    }
+    60% {
+              transform: translateX(9px) rotate(2.4deg);
+    }
+    75% {
+              transform: translateX(-6px) rotate(-1.2deg);
+    }
+  }
