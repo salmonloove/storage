@@ -494,8 +494,8 @@ main ul.main_nav li a.on{background: #a381a9;}
     opacity: 0.4;
 }
 #container .con_box .right-area .img-wrap img.pc-img{
-    right:-80px;
-    top:150px;
+    right:-40px;
+    top:200px;
     z-index: 2;
 }
 #container .con_box .right-area .img-wrap img.phone-img{
@@ -503,11 +503,11 @@ main ul.main_nav li a.on{background: #a381a9;}
     top:330px;
     z-index: 3;
 }
-#container .con_box .right-area .img-wrap img.tablet-img{
+/* #container .con_box .right-area .img-wrap img.tablet-img{
     right:435px;
     top:250px;
     z-index: 1;
-}
+} */
 #work7 .img-wrap img{right: 1px;}
 #work8 .img-wrap img{left: -350px;}
 /********************* #about-me *********************/
