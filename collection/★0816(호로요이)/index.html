@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>호로요이</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="left">
+            <div class="item " data-text="Peach">
+                <a href="#"><img src="./images/peach.png" alt=""></a>
+            </div>
+            <div class="item " data-text="Hapikle">
+                <a href="#"><img src="./images/hapikle.png" alt=""></a>
+            </div>
+            <div class="item " data-text="White">
+                <a href="#"><img src="./images/white.png" alt=""></a>
+            </div>
+        </div>
+        <div class="right">
+            <div class="item " data-text="Plum">
+                <a href="#"><img src="./images/plum.png" alt=""></a>
+            </div>
+            <div class="item " data-text="Grape">
+                <a href="#"><img src="./images/grape.png" alt=""></a>
+            </div>
+            <div class="item " data-text="Cola">
+                <a href="#"><img src="./images/cola.png" alt=""></a>
+            </div>
+        </div>
+        <div class="box">
+            <div id="cube">
+                <div class="face peach">
+                    <h4>피치</h4>
+                    <p>잘 익은 백도의 싱싱한 맛을 즐길 수 있는 부드러운 맛입니다.</p>
+                </div>
+                <div class="face hapikle">
+                    <h4>하피클</h4>
+                    <p>호로요이 특유의 부드러운 단맛이 느껴지는 유성 음료 맛의 술입니다.</p>
+                </div>
+                <div class="face white">
+                    <h4>화이트</h4>
+                    <p>유성 음료와 같은 부드러운 맛은 그대로, 새콤달콤한 상쾌함을 보다 느낄 수 있는 중미로 완성했습니다.</p>
+                </div>
+                <div class="face plum">
+                    <h4>매실차</h4>
+                    <p>매실의 기분 좋은 새콤달콤함과 함께, 방순한 풍미를 한층 더 즐길 수 있는 맛으로 완성했습니다.</p>
+                </div>
+                <div class="face grape">
+                    <h4>포도</h4>
+                    <p>포도의 달콤한 향기와 진한 과실감을 즐길 수 있는 부드러운 맛입니다.</p>
+                </div>
+                <div class="face cola">
+                    <h4>콜라</h4>
+                    <p>옛날에 먹던 콜라맛 아이스크림이 생각나는 콜라사워 맛입니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('.item').click(function () {
+            let liElem = $(this).attr('data-text')
+            let activeClass = 'show' + liElem
+            $('#cube').removeClass()
+            $('#cube').addClass(activeClass)
+        })
+    </script>
+</body>
+
+</html>

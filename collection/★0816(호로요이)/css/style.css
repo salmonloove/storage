@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrap{
+    background-image: url(../images/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.item img{height: 250px;}
+.left, .right{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 250px;
+    position: absolute;
+}
+.left {
+    top:0;
+    left:0;
+}
+.right{
+    top:0;
+    right:0;
+}
+.left > div, .right > div {flex:1;}
+.item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a:hover img {opacity: 60%;}
+.peach{background: #00b7ff;}
+.hapikle{background: #00ff6a;}
+.white{background: #ffae00;}
+.plum{background: #583bfa;}
+.grape{background: #01ffb3;}
+.cola{background: #ff00b3;}
+.box{
+    width: 500px;
+    height: 500px;
+    background: #000; 
+    position: absolute;
+    perspective: 1000px;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+#cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(-250px);
+    transition: 1s;
+}
+#cube.showPeach {transform: translateZ(-250px)rotateY(0deg);}
+#cube.showHapikle {transform: translateZ(-250px)rotateY(180deg);}
+#cube.showWhite {transform: translateZ(-250px)rotateY(-90deg);}
+#cube.showPlum {transform: translateZ(-250px)rotateY(90deg);}
+#cube.showGrape {transform: translateZ(-250px)rotateX(-90deg);}
+#cube.showCola {transform: translateZ(-250px)rotateX(90deg);}
+.face {
+    border: 1px solid #f0f;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    line-height: 300px;
+    font-size: 30px;
+    position: absolute;
+    backface-visibility: hidden;
+}
+.face p {display: none;}
+.face > h4 {
+    font-size: 30px;
+    margin-top: 100px;
+    display: none;
+}
+.face.peach > p {
+    font-size: 20px;
+    margin: -90px;
+}
+.face.hapikle > p {
+    font-size: 20px;
+    margin: -90px;
+}
+.face.white > p {
+    font-size: 14px;
+    margin: -90px;
+}
+.face.plum > p {
+    font-size: 15px;
+    margin: -90px;
+}
+.face.grape > p {
+    font-size: 20px;
+    margin: -90px;
+}
+.face.cola > p {
+    font-size: 20px;
+    margin: -90px;
+}
+.face:hover h4 {display: block;}
+.face:hover p {display: block;}
+.face.peach {
+     /* background: rgba(255, 0, 0, .5);  */
+    background-image: url(../images/peach.png);
+    background-position: center;
+    background-size: cover;
+    transform: rotateY(0deg) translateZ(250px);
+}
+.face.hapikle {
+     /* background: rgba(0, 255, 0, .5);  */
+     background-image: url(../images/hapikle.png);
+     background-position: center;
+     background-size: cover;
+    transform: rotateY(180deg) translateZ(250px);
+}
+.face.white {
+     /* background: rgba(0, 0, 255, .5);  */
+     background-image: url(../images/white.png);
+     background-position: center;
+     background-size: cover;
+    transform: rotateY(90deg) translateZ(250px);
+}
+.face.plum {
+     /* background: rgba(0, 255, 255, .5);  */
+     background-image: url(../images/plum.png);
+     background-position: center;
+     background-size: cover;
+    transform: rotateY(-90deg) translateZ(250px);
+}
+.face.grape {
+     /* background: rgba(255, 0, 255, .5); */
+     background-image: url(../images/grape.png);
+     background-position: center;
+     background-size: cover;
+    transform: rotateX(90deg) translateZ(250px);
+}
+.face.cola {
+     /* background: rgba(255, 0, 106, 0.5); */
+     background-image: url(../images/cola.png);
+     background-position: center;
+     background-size: cover;
+    transform: rotateX(-90deg) translateZ(250px);
+    color:#fff;
+}    
