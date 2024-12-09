@@ -494,8 +494,8 @@ main ul.main_nav li a.on{background: #a381a9;}
     opacity: 0.4;
 }
 #container .con_box .right-area .img-wrap img.pc-img{
-    right:-40px;
-    top:200px;
+    right:-10px;
+    top:250px;
     z-index: 2;
 }
 #container .con_box .right-area .img-wrap img.phone-img{
