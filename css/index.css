@@ -499,7 +499,7 @@ main ul.main_nav li a.on{background: #a381a9;}
     z-index: 2;
 }
 #container .con_box .right-area .img-wrap img.phone-img{
-    right:-80px;                  
+    right:-100px;                  
     top:330px;
     z-index: 3;
 }
