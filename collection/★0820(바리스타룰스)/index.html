@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>바리스타 룰스</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .flex {
+            display: flex;
+        }
+        a{
+            text-decoration: none; 
+            color:white;
+        }
+        li{list-style: none;}
+        .top {
+            background: #000;
+            color: #fff;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .p20 {
+            padding: 20px;
+        }
+
+        .p10 {
+            padding: 10px;
+        }
+
+        .menu {
+            background: #eee;
+            display: none;
+        }
+
+        .login {
+            background: #ccc;
+            display: none;
+        }
+
+        input[type='text'] {
+            display: block;
+        }
+
+        figure img {
+            width: 100%;
+        }
+
+        h2 {
+            justify-content: space-between;
+            display: flex;
+            background: #000;
+            color: #fff;
+            align-items: center;
+        }
+
+        h2 span {
+            background: #aaa;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 12px;
+            perspective: 100px;
+        }
+
+        h2 span img {
+            width: 24px;
+            transition: .35s;
+        }
+
+        h2 span:hover {
+            background: #777;
+        }
+
+        h2 span.on img {
+            transform: rotateX(180deg);
+        }
+
+        h3 {
+            background: #ccc;
+        }
+
+        /* ------------------------------------ */
+        .product-more {
+            display: none;
+        }
+
+        /* ------------------------------------ */
+        .product-summary {
+            position: relative;
+            height: 160px;
+
+        }
+
+        .product-summary li {
+            position: absolute;
+        }
+
+        /* ------------------------------------ */
+        .product-item {
+            display: flex;
+            flex-wrap: wrap;
+            background: #ccc;
+        }
+
+        .product-item li {
+            padding: 10px;
+            width: 50%;
+            text-align: center;
+        }
+
+        .product-item li.on {
+            background: #000;
+            color: #fff
+        }
+
+        .cart {
+            background: #aaa;
+            text-align: center;
+        }
+
+        .cart a {
+            display: block;
+        }
+
+        .cart.on {
+            background: #000;
+            color: #ffff
+        }
+
+        .more.on {
+            background-color: rgb(127, 239, 245);
+        }
+
+        footer{
+            background: #c5b5b5;
+            height: 100px;
+        }
+
+        footer p{
+            text-align: center;
+            padding-top: 3%;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="top flex">
+            <a href="#" class="menu-icon">메뉴</a>
+            <h1><img src="./logo.png" alt=""></h1>
+            <a href="#" class="login-icon">로그인</a>
+        </div>
+        <div class="menu p20">
+            <ul>
+                <li><a href="#">커피 브루</a></li>
+                <li><a href="#">에스프레소</a></li>
+                <li><a href="#">그란데</a></li>
+            </ul>
+        </div>
+        <div class="login flex p20">
+            <div class="col">
+                <input type="text" placeholder="ID">
+                <input type="text" placeholder="PW">
+            </div>
+            <input type="submit" value="로그인">
+        </div>
+    </header>
+    <div class="product-list">
+        <div class="product">
+            <!--보이는 이미지------------------------------------------------->
+            <figure>
+                <img src="./벨지엄쇼콜라모카.png" alt="">
+            </figure>
+            <h2>커피 브루<span class="p10 more"><img src="detail.png" alt=""></span></h2>
+            <!--숨겨있는 내용------------------------------------------------->
+            <div class="product-more">
+                <ul class="product-summary">
+                    <li>
+                        <h3 class="product-name p10">벨지엄 쇼콜라 모카</h3>
+                        <div class="product-desc p10">
+                            <p>벨기에 생초콜릿과 카카오향 원두의 진한 달콤함</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3 class="product-name p10">마다가스카르 바닐라빈 라떼</h3>
+                        <div class="product-desc p10">
+                            <p>부드럽고 달콤한 향의 리얼 버번 바닐라빈</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3 class="product-name p10">돌체 라떼</h3>
+                        <div class="product-desc p10">
+                            <p>신선한 원유와 연유의 부드럽고 달콤한 풍미</p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="product-item">
+                    <li><a href="./벨지엄쇼콜라모카.png">벨지엄쇼콜라모카</a></li>
+                    <li><a href="./바닐라빈라떼.png">바닐라빈라떼</a></li>
+                    <li><a href="./돌체라떼.png">돌체 라떼</a></li>
+                </ul>
+                <div class="cart p10"><a href="#">장바구니 담기</a></div>
+            </div>
+        </div>
+        <div class="product">
+            <figure>
+                <img src="./카라멜딥프레소.png" alt="">
+            </figure>
+            <h2>에스프레소 <span class="p10 more"><img src="detail.png" alt=""></span></h2>
+            <div class="product-more">
+
+                <ul class="product-summary">
+                    <li>
+                        <h3 class="product-name p10">카라멜 딥 프레소</h3>
+                        <div class="product-desc p10">
+                            <p>달콤한 원두에 더해진 다크 생카라멜의 진한 풍미</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3 class="product-name p10">스모키 로스팅 라떼</h3>
+                        <div class="product-desc p10">
+                            <p>직화 참숯 로스팅으로 담아낸 풍부한 스모키 향미</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3 class="product-name p10">모카프레소</h3>
+                        <div class="product-desc p10">
+                            <p>원두의 고소함과 생초콜릿의 달콤 쌉쌀한 조합</p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="product-item">
+                    <li><a href="./카라멜딥프레소.png">카라멜 딥 프레소</a></li>
+                    <li><a href="./스모키.png">스모키 로스팅 라떼</a></li>
+                    <li><a href="./모카프레소.png">모카프레소</a></li>
+                </ul>
+                <div class="cart p10"><a href="#">장바구니 담기</a></div>
+            </div>
+        </div>
+        <div class="product">
+            <figure>
+                <img src="./그란데스위트.png" alt="">
+            </figure>
+            <h2>그란데 <span class="p10 more"><img src="detail.png" alt=""></span></h2>
+            <div class="product-more">
+                <ul class="product-summary">
+                    <li>
+                        <h3 class="product-name p10">그란데 스위트 아메리카노</h3>
+                        <div class="product-desc p10">
+                            <p>최고등급 싱글오리진 원두로 즐기는 특별한 커피맛</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3 class="product-name p10">그란데 아메리카노</h3>
+                        <div class="product-desc p10">
+                            <p>최고등급 싱글오리진 원두로 즐기는 특별한 커피맛</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3 class="product-name p10">그란데 라떼</h3>
+                        <div class="product-desc p10">
+                            <p>최고등급 싱글오리진 원두로 즐기는 특별한 커피맛</p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="product-item">
+                    <li><a href="./그란데스위트.png">그란데스위트</a></li>
+                    <li><a href="./그란데.png">그란데</a></li>
+                    <li><a href="./그란데라떼.png">그란데라떼</a></li>
+                </ul>
+                <div class="cart p10"><a href="#">장바구니 담기</a></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>서울시 종로구 종로 1길 50 더 케이 트윈타워 A동 <br> 대표전화 : 1588-1539 <br>Copyright ⓒ 2017 by Maeil Co.Ltd All rights reserved.</p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        ////////////////////////////////////////////////////////////
+        //버튼 활성화
+        //$('.product-item li').first().addClass('on')
+        $('.product-item').each(function () {
+            $(this).find('li').first().addClass('on')
+
+        })
+        //첫번째 상품 상세페이지만 보여줘
+        //  $('.product-summary li').first().siblings().css('display','none')
+        $('.product-summary').each(function () {
+            $(this).find('li').first().siblings().css('display', 'none')
+        })
+
+        ////////////////////////////////////////////////////////////
+        $('.product-item li a').click(function (e) {
+            e.preventDefault()
+            let productImg = $(this).attr('href')//값을 읽어라
+            //  console.log(productImg);
+
+            // $('figure img').attr('src',productImg)//값을 할당하겠다
+            $(this).closest('.product').find('figure img').attr('src', productImg)
+
+            // 버튼 활성화
+            //  $('.product-item li').removeClass('on')
+            $(this).parent().siblings().removeClass('on')
+            $(this).parent().addClass('on')
+
+            //해당 상품 설명 보여줘
+            let i = $(this).parent().index()
+            $(this).closest('.product-item').prev().find('li').hide()
+            $(this).closest('.product-item').prev().find('li').eq(i).show()
+
+        })
+        ////////////////////////////////////////////////////////////
+        $('.more').click(function () {
+            let $this = $(this)
+            let $productMore = $this.parent().next('.product-more')
+
+            if ($this.hasClass('on')) {//상세보기가 열려있는 상태이면
+                $this.removeClass('on')//상세보기 버튼 remove하고
+                $productMore.slideUp()//상세보기 내용 닫아라
+
+            } else {
+                $('.more').removeClass('on')//기존에 있는 모든것 닫기
+                $('.product-more').slideUp()//기존에 열려있는 페이지 닫기
+
+
+                $(this).addClass('on')//현재 활성화
+                $productMore.slideDown()//현재에 해당 하는 상세설명 보기
+            }
+        })
+        // $('.items').each(function(){
+        //         $(this).find('li').first().addClass('on')
+        //     })
+        //     $('.detail').each(function(){
+        //         $(this).find('li').first().siblings().css('display', 'none')
+        //     })
+        //     $('.items li a').click(function(e){
+        //         e.preventDefault()
+        //         //a에 지정되어 있는 이미지의 이름을 읽게하는 명령어
+        //         let productImg=$(this).attr('href')
+        //         //나와 가장 근접한 .product 하위에 있는 figure img 속성값을 바꾸는 명령어
+        //         $('figure img').attr('src',productImg)
+        //         //읽어온 이미지를 figure의 이미지 속성으로 바꾸는 명령어
+        //         // alert(productImg)
+                
+        //         /*해당 카테고리에 있는 버튼 활성화 비활성화 변경*/
+        //         //a는 순서가 지정되어 있지 않아서 a의 부모인 li의 순서를 읽게하는 명령어
+        //         let idx=$(this).parent().index()
+        //         //이벤트 클릭한 a의 부모의 형제들만 removeClass('on')
+        //         $('items li').removeClass('on')
+        //         $(this).parent().addClass('on')
+                
+        //         //지금 클릭한 부모만 
+        //         // alert(idx)
+        //         //이벤트 시점의 부모 .items 형제들만 숨기기
+        //         $('.detail li').hide()
+        //         //이벤트 시점의 부모 .items prev의 자식 li번째 보이기
+        //         $('.detail li').eq(idx).show()          
+        //     })
+    </script>
+</body>
+</html>
+
