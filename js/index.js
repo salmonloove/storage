@@ -47,7 +47,7 @@ links.forEach((link) => {
       var popup = window.open('http://www.naver.com', '모바일 팝업', 'width=700px,height=800px,scrollbars=yes');
     }
     function openPop2(){
-      var popup2 = window.open('http://www.google.com', '모바일 팝업', 'width=700px,height=800px,scrollbars=yes');
+      var popup2 = window.open('./collection/★0820(바리스타룰스)/index.html', '모바일 팝업', 'width=700px,height=800px,scrollbars=yes');
     }
     function openPop3(){
       var popup2 = window.open('http://www.daum.net', '포스터 팝업', 'width=700px,height=800px,scrollbars=yes');
