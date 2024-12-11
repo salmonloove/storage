@@ -1,0 +1,41 @@
+/*
+let color = red;
+$color = red
+*/
+/* function(){} = @mixin(){}*/
+/* @include */
+.card2 li:hover, .card2 li:first-child {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+body {
+  background-color: red;
+}
+
+.card1 {
+  background: #eee;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px;
+  box-shadow: 0 10px 10px black;
+}
+.card1 ul li {
+  color: #f90;
+  /* $(this) = & */
+}
+.card1 ul li:hover {
+  background: blue;
+}
+
+/*
+%props {}
+@extend %props;
+*/
+.card2 {
+  background: #eee;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px;
+  box-shadow: 0 10px 10px orange;
+}/*# sourceMappingURL=style.css.map */

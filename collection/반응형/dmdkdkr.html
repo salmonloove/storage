@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            padding: 12px;
+            border: 1px solid #000;
+        }
+            .flex {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        /***모바일***/
+        @media only screen and (max-width:640px) /*화면크기가 640px 이하일때*/ {
+            body {
+                background-color: rgb(0, 153, 255);
+            }
+            .box{width: 100%;}
+        }
+        /*********/
+        /***테블릿(min-width끼리는 속성 상속됨)***/
+        @media only screen and (min-width:641px) /*화면크기가 641px이상일때*/ {
+            body {
+                background-color: rgb(38, 0, 255);
+            }
+            .box{flex:1;}/*flex활성화*/
+        }
+        /*********/
+        /***데스크탑***/
+        @media only screen and (min-width:1280px) {
+            body {
+                background-color: rgb(255, 145, 0);
+            }
+            
+        }
+        /*********/
+    </style>
+</head>
+<body>
+    <div class="container flex">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+        <div class="box">box5</div>
+    </div>
+</body>
+</html>
