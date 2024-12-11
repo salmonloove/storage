@@ -499,22 +499,12 @@ main ul.main_nav li a.on{background: #a381a9;}
     z-index: 2;
 }
 #container .con_box .right-area .img-wrap img.phone-img{
-    right:10px;                  
-    top:200px;
+    left:-300px;                  
+    top:100px;
     z-index: 3;
+    width: 800px;
 }
-#container .con_box .right-area .img-wrap img.phone-img:nth-child(2){
-    width:700px;
-    height:600px;
-   right:-80px;                  
-    top:330px;
-     z-index: 3;
-}
-#container .con_box .right-area .img-wrap img.phone-img:nth-child(3){
-   right:-80px;                  
-    top:330px;
-     z-index: 3;
-}
+
 
 /* #container .con_box .right-area .img-wrap img.tablet-img{
     right:435px;
