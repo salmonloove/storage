@@ -44,7 +44,7 @@ links.forEach((link) => {
     requestAnimationFrame(raf);
     
     function openPop(){
-      var popup = window.open('http://www.naver.com', '모바일 팝업', 'width=700px,height=800px,scrollbars=yes');
+      var popup = window.open('./collection/도개마을/index.html', '모바일 팝업', 'width=700px,height=800px,scrollbars=yes');
     }
     function openPop2(){
       var popup2 = window.open('./collection/★0820(바리스타룰스)/index.html', '모바일 팝업', 'width=700px,height=800px,scrollbars=yes');
