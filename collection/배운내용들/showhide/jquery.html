@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><!--()son {} promise $(selector).document() 셀렉터.명령어 $(document).ready(function(){}
+    문서 읽으면 실행-->
+    <style>
+        * {
+            margin: 0; 
+            padding: 0;
+        }
+        img{vertical-align: top;}
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        li{
+            list-style: none;
+            padding: 10px;
+            width: 20%;
+            text-align: center;
+            background: #ccc;
+        }
+        li:hover {
+        background: #333;
+        color: #fff;
+        cursor: pointer;
+    }
+    li:on, {background: orangered;}
+        .wrap {
+            width: 400px;
+            margin: auto;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <figure>
+            <img src="./images/gallery2.jpg" alt="">
+        </figure>
+        <ul>
+            <li class="show on">SHOW</li>
+            <li class="hide">HIDE</li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $('.show').click(function(){
+            $('li').removeClass('on')
+            $(this).addClass('on')/*여기서 this는 .show를 말함*/
+           /* $('figure').show()*/
+            $('figure').slideDown(2000)
+        })
+        $('.hide').click(function(){
+            $('li').removeClass('on')
+            $(this).addClass('on')
+           /* $('figure').hide()*/
+            $('figure').slideUp(2000)
+        })
+    </script>
+</body>
+</html>
