@@ -504,12 +504,12 @@ main ul.main_nav li a.on{background: #a381a9;}
     z-index: 3;
 }
 #container .con_box .right-area .img-wrap img.phone-img:nth-child(2){
-    right:-30px;                  
+    right:200px;                  
     top:500px;
     z-index: 3;
 }
 #container .con_box .right-area .img-wrap img.phone-img:nth-child(3){
-    right:-150px;                  
+    right:-300px;                  
     top:500px;
     z-index: 3;
 }
