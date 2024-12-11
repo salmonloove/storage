@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{height: 100%;}
+        body{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            max-width: 1200px;
+            width: 100%;
+            height: 90vh;
+        }
+        .container ul{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: 1fr;
+            height: 100%;
+            color: rgb(0, 132, 255);
+        }
+        .container ul li{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .container ul li:before{
+            position: absolute;
+            content: '';
+            top : 0;
+            left : 0;
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            filter: brightness(.3);   
+        }
+    .container ul .img_box{
+        position: absolute;
+            content: '';
+            top : 0;
+            left : 0;
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            clip-path: circle(0% at 50% 50%);
+            transition: .35s;
+        }
+        .container ul li:hover .img_box{
+            clip-path: circle(50% at 50% 50%);
+            filter: brightness(.7);
+        }
+        .container ul .img1, .container ul .work01:before{
+            background-image: url(./);
+        }.container ul .img1, .container ul .work01:before{
+            background-image: url(./);
+        }
+        .container ul .img1, .container ul .work01:before{
+            background-image: url(./);
+        }
+        .container ul .img1, .container ul .work01:before{
+            background-image: url(./);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li class="work01">
+                <div class="img_box1">
+                    <div class="inner">
+                        <div class="title">
+                            <span>Project</span>
+                            <p>도개마을</p>
+                        </div>
+                        <div class="detail">
+                            <p>도개마을 웹사이트 리뉴얼</p>
+                            <a href="#" class="more">VIEW MORE</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="work02">
+                <div class="img_box2">
+                    <div class="inner">
+                        <div class="title">
+                            <span>WEB</span>
+                            <p>청와대 </p>
+                        </div>
+                        <div class="detail">
+                            <p>청와대 웹사이트 리뉴얼</p>
+                            <a href="#" class="more">VIEW MORE</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="work03">
+                <div class="img_box3">
+                    <div class="inner">
+                        <div class="title">
+                            <span>UXUI Design</span>
+                            <p>Identity Symbol design</p>
+                        </div>
+                        <div class="detail">
+                            <p>심볼로고 디자인</p>
+                            <a href="#" class="more">VIEW MORE</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="work04">
+                <div class="img_box4">
+                    <div class="inner">
+                        <div class="title">
+                            <span>WEB</span>
+                            <p>My PortFolio</p>
+                        </div>
+                        <div class="detail">
+                            <p>나의 웹 포트폴리오</p>
+                            <a href="#" class="more">VIEW MORE</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

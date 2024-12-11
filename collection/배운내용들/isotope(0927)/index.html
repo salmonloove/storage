@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="/reset.css"> -->
+    <script src="./modernizr.custom.97074.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        html {
+            overflow-y: scroll;
+            /* 자료가 적다가,많다가 하니 스크롤이 생겼다가,없어졌다가 해서 꼭 필요 */
+        }
+
+        /* ---- isotope ---- */
+        .container {
+            max-width: 1400px;
+            margin: auto;
+        }
+
+
+        .grid {
+ 
+            width: 100%;
+
+        }
+
+        a{
+            text-decoration: none;
+        }
+        li{
+            list-style: none;
+        }
+        /* clear fix */
+        .grid:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+      
+
+        .grid-item {
+            width: calc(33.33% - 12px);
+            float: left;
+            margin-bottom: 20px;
+        }
+
+        .grid-item img {
+            display: block;
+            width: 100%;
+
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 50px auto;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        ul.menu {
+            width: 50%;
+            display: flex;
+        }
+
+        ul.menu li {
+            flex: 1;
+        }
+
+        ul.menu li a {
+            display: inline-block;
+            padding: 20px
+        }
+
+        ul.menu li a.on {
+
+            background: #000;
+            color: #fff;
+        }
+        .summary{
+            position: absolute;
+            background: #333;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .summary h2{
+            border-bottom: 1px solid #fff;
+            padding: 10px;
+            font-size: 2vw;
+        }
+        .summary span.skill{padding: 10px;}
+        .grid-item img{}
+        .grid-item:hover .summary{
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="#" data-filter="*" class="on">All</a></li>
+            <li><a href="#" data-filter=".web">클론코딩</a></li>
+            <li><a href="#" data-filter=".project">프로젝트</a></li>
+            <li><a href="#" data-filter=".design">그래픽&nbsp;디자인</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="grid">
+            <div class="grid-item web">
+                <a data-caption="Tab활용" data-fancybox="gallery" data-src="./masonry_col2_1.jpg">
+                    <img src="./masonry_col2_1.jpg" alt="">
+                    <div class="summary">
+                        <h2>제목</h2>
+                        <span class="skill">Tab활용</span class="skill">
+                        <span>2024.10.04</span>
+                </div></a>
+            </div>
+            <div class="grid-item design">
+                <a data-caption="Tab활용" data-fancybox="gallery" data-src="./dribbble-1.png">
+                    <img src="./dribbble-1.png" alt="">
+                    <div class="summary">
+                        <h2>제목</h2>
+                        <span class="skill">Tab활용</span class="skill">
+                        <span>2024.10.04</span>
+                    </div>
+                </a>
+            </div>
+            <div class="grid-item web">
+                <a data-caption="Tab활용" data-fancybox="gallery" data-src="./masonry_col2_3.jpg">
+                    <img src="./masonry_col2_3.jpg" alt="">
+                    <div class="summary">
+                        <h2>제목</h2>
+                        <span class="skill">Tab활용</span class="skill">
+                        <span>2024.10.04</span>
+                    </div>
+                </a>
+            </div>
+            <div class="grid-item design">
+                    <a data-caption="Tab활용" data-fancybox="gallery" data-src="./dribbble-2.png">
+                        <img src="./dribbble-2.png" alt="">
+                        <div class="summary">
+                            <h2>제목</h2>
+                            <span class="skill">Tab활용</span class="skill">
+                            <span>2024.10.04</span>
+                        </div>
+                    </a>
+            </div>
+            <div class="grid-item web">
+                    <a data-caption="Tab활용" data-fancybox="gallery" data-src="./masonry_col2_4.jpg">
+                        <img src="./masonry_col2_4.jpg" alt="">
+                        <div class="summary">
+                            <h2>제목</h2>
+                            <span class="skill">Tab활용</span class="skill">
+                            <span>2024.10.04</span>
+                        </div>
+                    </a>
+            </div>
+            <div class="grid-item design">
+                    <a data-caption="Tab활용" data-fancybox="gallery" data-src="./dribbble-3.png">
+                        <img src="./dribbble-3.png" alt="">
+                        <div class="summary">
+                            <h2>제목</h2>
+                            <span class="skill">Tab활용</span class="skill">
+                            <span>2024.10.04</span>
+                        </div>
+                    </a>
+            </div>
+            <div class="grid-item project">
+                    <a data-caption="Tab활용" data-fancybox="gallery" data-src="./dribbble-4.png">
+                        <img src="./dribbble-4.png" alt="">
+                        <div class="summary">
+                            <h2>제목</h2>
+                            <span class="skill">Tab활용</span class="skill">
+                            <span>2024.10.04</span>
+                        </div>
+                    </a>
+            </div>
+            <div class="grid-item project">
+                    <a data-caption="Tab활용" data-fancybox="gallery" data-src="./dribbble-5.png">
+                        <img src="./dribbble-5.png" alt="">
+                        <div class="summary">
+                            <h2>제목</h2>
+                            <span class="skill">Tab활용</span class="skill">
+                            <span>2024.10.04</span>
+                        </div>
+                    </a>
+            </div>
+
+            <div class="grid-item design">
+                    <a data-caption="Tab활용" data-fancybox="gallery" data-src="./dribbble-7.png">
+                        <img src="./dribbble-7.png" alt="">
+                        <div class="summary">
+                            <h2>제목</h2>
+                            <span class="skill">Tab활용</span class="skill">
+                            <span>2024.10.04</span>
+                        </div>
+                    </a>
+            </div>
+            <div class="grid-item project">
+                    <a data-caption="Tab활용" data-fancybox="gallery" data-src="./dribbble-8.png">
+                        <img src="./dribbble-8.png" alt="">
+                        <div class="summary">
+                            <h2>제목</h2>
+                            <span class="skill">Tab활용</span class="skill">
+                            <span>2024.10.04</span>
+                        </div>
+                    </a>
+            </div>
+            <div class="grid-item design">
+                    <a data-caption="Tab활용" data-fancybox="gallery" data-src="./dribbble-9.png">
+                        <img src="./dribbble-9.png" alt="">
+                        <div class="summary">
+                            <h2>제목</h2>
+                            <span class="skill">Tab활용</span class="skill">
+                            <span>2024.10.04</span>
+                        </div>
+                    </a>
+            </div>
+            <div class="grid-item web">
+                    <a data-caption="Tab활용" data-fancybox="gallery" data-src="./masonry_col2_4.jpg">
+                        <img src="./masonry_col2_4.jpg" alt="">
+                        <div class="summary">
+                            <h2>제목</h2>
+                            <span class="skill">Tab활용</span class="skill">
+                            <span>2024.10.04</span>
+                        </div>
+                    </a>
+            </div>
+            <div class="grid-item web">
+                <a data-caption="Tab활용" data-fancybox="gallery" data-src="./masonry_col2_5.jpg">
+                    <img src="./masonry_col2_5.jpg" alt="">
+                    <div class="summary">
+                        <h2>제목</h2>
+                        <span class="skill">Tab활용</span class="skill">
+                        <span>2024.10.04</span>
+                    </div>
+                </a>
+            </div>
+            <div class="grid-item design">
+                <a data-caption="Tab활용" data-fancybox="gallery" data-src="./dribbble-10.png">
+                    <img src="./dribbble-10.png" alt="">
+                    <div class="summary">
+                        <h2>제목</h2>
+                        <span class="skill">Tab활용</span class="skill">
+                        <span>2024.10.04</span>
+                    </div>
+                </a>
+            </div>
+            <div class="grid-item web">
+                <a data-caption="Tab활용" data-fancybox="gallery" data-src="./masonry_col2_6.jpg">
+                    <img src="./masonry_col2_6.jpg" alt="">
+                    <div class="summary">
+                        <h2>제목</h2>
+                        <span class="skill">Tab활용</span class="skill">
+                        <span>2024.10.04</span>
+                    </div>
+                </a>
+            </div>
+            <div class="grid-item web">
+                <a data-caption="Tab활용" data-fancybox="gallery" data-src="./masonry_col2_7.jpg">
+                    <img src="./masonry_col2_7.jpg" alt="">
+                    <div class="summary">
+                        <h2>제목</h2>
+                        <span class="skill">Tab활용</span class="skill">
+                        <span>2024.10.04</span>
+                    </div>
+                </a>
+            </div>
+            <div class="grid-item web">
+                <a data-caption="Tab활용" data-fancybox="gallery" data-src="./masonry_col2_8.jpg">
+                    <img src="./masonry_col2_8.jpg" alt="">
+                    <div class="summary">
+                        <h2>제목</h2>
+                        <span class="skill">Tab활용</span class="skill">
+                        <span>2024.10.04</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="grid-item web">
+                <a data-caption="Tab활용" data-fancybox="gallery" data-src="./masonry_col2_9.jpg">
+                    <img src="./masonry_col2_9.jpg" alt="">
+                    <div class="summary">
+                        <h2>제목</h2>
+                        <span class="skill">Tab활용</span class="skill">
+                        <span>2024.10.04</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="grid-item web">
+                <a data-caption="Tab활용" data-fancybox="gallery" data-src="./masonry_col2_10.jpg">
+                    <img src="./masonry_col2_10.jpg" alt="">
+                    <div class="summary">
+                        <h2>선산도개마을</h2>
+                        <span class="skill">Tab활용</span class="skill">
+                        <span>2024.10.04</span>
+                    </div>
+                </a>
+            </div>
+            <div class="grid-item web">
+                <a data-caption="Tab활용" data-fancybox="gallery" data-src="./masonry_col2_11.jpg">
+                    <img src="./masonry_col2_11.jpg" alt="">
+                    <div class="summary">
+                        <h2>제목</h2>
+                        <span class="skill">Tab활용</span class="skill">
+                        <span>2024.10.04</span>
+                    </div>
+                </a>
+            </div>
+            <div class="grid-item web">
+                <a data-caption="Tab활용" data-fancybox="gallery" data-src="./masonry_col2_12.jpg">
+                    <img src="./masonry_col2_12.jpg" alt="">
+                    <div class="summary">
+                        <h2>제목</h2>
+                        <span class="skill">Tab활용</span class="skill">
+                        <span>2024.10.04</span>
+                    </div>
+                </a>
+            </div>
+            <a data-fancybox="gallery" data-src=""text2.html" data-height=""1000></a>
+
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script src="js/jquery.hoverdir.js"></script>
+    <script>
+
+        var $grid = $('.grid').imagesLoaded(function () {
+            $grid.isotope({
+                itemSelector: '.grid-item',
+
+                masonry: {
+                    columnWidth: '.grid-item',
+                    gutter: 18
+                }
+
+            });
+        });
+        
+        $grid.imagesLoaded().progress(function () {
+            $grid.isotope('layout');
+        }); 
+        $('.menu li a').on('click', function(e){
+            e.preventDefault()
+            $('.menu li a').removeClass('on')
+            $(this).addClass('on')
+            var filterValue = $(this).attr('data-filter');
+            $grid.isotope({ filter: filterValue });
+        });
+        $('.grid-item').each(function () { $(this).hoverdir(); });
+        Fancybox.bind("[data-fancybox]", { });
+    </script>
+</body>
+
+</html>

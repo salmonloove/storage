@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{text-decoration: none;}
+        li.active a{color:blue}
+        li{ 
+            width: 50px;
+            height: 50px;
+            background: #b45353;
+        }
+    </style>
+</head>
+<body>
+    <ul id="list">
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+        <li>list5</li>
+        <li>list6</li>
+        <li>list7</li>
+        <li>list8</li>
+        <li>list9</li>
+        <li>list10</li>
+    </ul>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+
+        $('li').each(function(i){
+            $(this).delay(i*500).animate('left','90%')
+        })
+        // $('#list').children('li').css('color', 'red')
+    //    $('li.active').next().css('font-size','30px')
+    //    $('li').not(':eq(1)').css('font-weight','bold')
+        // $('ul li:first').css('color','red')
+        // $('ul li:last').css({'font-style':'italic','background-color':'orange'})
+        // $('ul li:even').css('border','1px solid blue')
+        // $('ul li:odd').css('border','1px dashed hotpink')
+        // $('ul li:eq(2)').css('border','1px dashed hotpink')
+        // $('ul gt(2)').css('font-weight','bold')
+        // $('ul lt(2)').css('color','green')
+        // $('ul li:not(:eq(2))').css('list-style','none')
+        // $('ul li:contains).css("list3")')
+        // $('ul li:contains("list3"))').css('text-decoration','underline')
+    </script>
+</body>
+</html>
