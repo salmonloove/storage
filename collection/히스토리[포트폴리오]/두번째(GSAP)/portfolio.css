@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    z-index: 9999;
+}
+
+h1 img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+section {
+
+    border: 1px solid #000;
+    position: relative;
+    width: 100%;
+
+}
+
+h2 {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 50px;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.num {
+    font-family: "Poiret One", serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 200px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #ddd;
+    opacity: .5;
+
+}
+
+/* --------------------------- */
+#intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3498db;
+    overflow: hidden;
+}
+
+#intro h2 {
+    font-size: 50px;
+    transition: font-size 0.35s ease;
+    height: 100vh;
+    align-items: center;
+}
+
+#intro h2 em {
+
+    font-size: 50px;
+    position: absolute;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* --------------------------- */
+#project {
+    background-color: #2ecc71;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#project h2 {
+    position: absolute;
+    font-size: 5rem;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+}
+
+.project_list {
+    max-width: 1400px;
+
+}
+
+.project_list li {
+    position: relative;
+}
+
+.project_list h3 {
+    position: absolute;
+    font-size: 2vw;
+    bottom: -50px;
+    left: -10px;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+}
+
+.project_list li img {
+    width: 100%;
+}
+
+/* ----------------------------------- */
+#work {
+    background: #333;
+    color: #fff;
+    height: 100vh;
+}
+
+.text {
+    font-size: 5vw;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+    background-color: #333;
+    padding: 30px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+/* ----------------------------------- */
+
+.uxui_wrap {
+    max-width: 90%;
+    margin: auto;
+}
+
+.uxui_item {
+    height: 70vh;
+    display: flex;
+    border-radius: 50px 50px 0 0;
+    background-size: cover;
+    position: sticky;
+
+}
+
+#uxui h2 {
+    position: sticky;
+    top: 0px;
+    left: 0;
+    width: 70%;
+    height: 5vw;
+    font-size: 5vw;
+    margin: 50px 0;
+}
+
+/* --------------------------------------- */
+
+.uxui_item.s1 {
+    background: url(./imgs/event.jpg);
+    top: 100px;
+}
+
+.uxui_item.s2 {
+    background: url(./imgs/poster.jpg);
+    top: 150px;
+}
+
+/* .uxui_item.s3 {
+    background: url(./imgs/grap3.jpg);
+    top: 200px;
+} */
+
+.uxui_item.s3 {
+    background: url(./imgs/symbol.jpg);
+    top: 200px;
+}
+
+.uxui_item h3.title {
+    position: absolute;
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 999px;
+    display: inline-block;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
