@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .frame {
+            width: 500px;
+        }
+
+        figure img {
+            width: 100%;
+        }
+
+        ul li {
+            display: inline-block;
+            white-space: nowrap;
+            letter-spacing: .15em;
+            overflow: hidden;
+            width: 0;  
+            border-right: none;  
+           
+        }
+  
+        li:hover {
+            animation: typing 3.5s steps(40, end) forwards;
+             
+        }
+
+        /* The typing effect */
+        @keyframes typing {
+            from {
+                width: 0
+            }
+
+            to {
+                width: 100%
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="frame">
+        <figure><img src="./img/f.jpg" alt=""></figure>
+        <ul>
+            <li data-bg="./img/f.jpg">프랑스</li>
+            <li data-bg="./img/i.jpg">이탈리아</li>
+            <li data-bg="./img/g.jpg">그리스</li>
+        </ul>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        // $('li').click(function(){
+        //    const img=$(this).data('bg')//get
+        //    $('figure img').attr('src',img)//set
+        // })
+        document.querySelectorAll('li').forEach(function (a) {
+            a.addEventListener('click', function (e) {
+                e.preventDefault()
+                let img = this.dataset.bg
+                document.querySelector('figure img').setAttribute('src', img)
+            })
+        })
+    </script>
+</body>
+
+</html>

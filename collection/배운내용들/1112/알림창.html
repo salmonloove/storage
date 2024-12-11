@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="alert-box" id="alert_box">
+        <h2 id="title">알림창</h2>
+        <button onclick="closeWindow()">닫기</button>
+    </div>
+    <button onclick="openWindow('공지')">공지</button>
+    <button onclick="openWindow('뉴스')">뉴스</button>
+    <script>
+        document.getElementById('closeWindow').addEventListener('click', function(){
+           alert_box.style.display = 'none'
+        })
+        document.getElementById('noticeWindow').addEventListener('click', function(){
+            openWindow('공지')
+        })
+        document.getElementById('newsWindow').addEventListener('click', function(){
+            openWindow('뉴스')
+        })
+        function openWindow(title) {
+            document.getElementById('title').innerText = title
+            // innerText 엘리먼트(요소)의 text(입력된 텍스트)값만 가져오지만
+            // innerHTML은 요소의 html(div같은 태그들도 모두)까지 가져옴
+            document.getElementById('alert_box').style.display = 'block'
+        }
+        function closeWindow(){
+            document.getElementById('alert_box').style.display = 'none'
+        }
+    </script>
+</body>
+</html>

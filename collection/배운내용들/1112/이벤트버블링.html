@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            padding: 50px;
+            border: 1px solid #000;
+        }
+        .outer{background: #fdd;}
+        .middle{background: #f99;}
+        .inner{background: #f11;}
+    </style>
+</head>
+<body>
+    <div class="outer">
+        OUTER DIV
+        <div class="middle">
+            MIDDLE DIV
+            <div class="inner">
+                INNER DIV
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelector('.outer').addEventListener('click',function(){
+            alert('outer div clicked')
+        })
+        document.querySelector('.middle').addEventListener('click',function(){
+            alert('middle div clicked')
+        })
+        document.querySelector('.inner').addEventListener('click',function(){
+            alert('inner div clicked')
+        })
+    </script>
+</body>
+</html>
