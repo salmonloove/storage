@@ -504,14 +504,14 @@ main ul.main_nav li a.on{background: #a381a9;}
     z-index: 3;
 }
 #container .con_box .right-area .img-wrap img.phone-img:nth-child(2){
-    right:200px;                  
-    top:400px;
-    z-index: 3;
+   right:-80px;                  
+    top:330px;
+     z-index: 3;
 }
 #container .con_box .right-area .img-wrap img.phone-img:nth-child(3){
-    right:-300px;                  
-    top:400px;
-    z-index: 3;
+   right:-80px;                  
+    top:330px;
+     z-index: 3;
 }
 
 /* #container .con_box .right-area .img-wrap img.tablet-img{
