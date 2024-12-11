@@ -499,18 +499,18 @@ main ul.main_nav li a.on{background: #a381a9;}
     z-index: 2;
 }
 #container .con_box .right-area .img-wrap img.phone-img{
-    right:-10px;                  
+    right:10px;                  
     top:200px;
     z-index: 3;
 }
 #container .con_box .right-area .img-wrap img.phone-img:nth-child(2){
     right:200px;                  
-    top:500px;
+    top:400px;
     z-index: 3;
 }
 #container .con_box .right-area .img-wrap img.phone-img:nth-child(3){
     right:-300px;                  
-    top:500px;
+    top:400px;
     z-index: 3;
 }
 
