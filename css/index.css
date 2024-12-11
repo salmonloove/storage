@@ -499,8 +499,8 @@ main ul.main_nav li a.on{background: #a381a9;}
     z-index: 2;
 }
 #container .con_box .right-area .img-wrap img.phone-img{
-    right:-100px;                  
-    top:330px;
+    right:-10px;                  
+    top:200px;
     z-index: 3;
 }
 #container .con_box .right-area .img-wrap img.phone-img:nth-child(2){
