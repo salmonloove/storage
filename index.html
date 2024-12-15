@@ -794,22 +794,6 @@
       });
     });
     </script>
-    <script>
-      const visualSection = document.getElementById('visual');
-
-      // visual 섹션의 위치 (top값)
-      const visualTop = visualSection.offsetTop;
-      const visualHeight = visualSection.offsetHeight;
-  
-      // 스크롤 이벤트 리스너 추가
-      window.addEventListener('scroll', () => {
-        // 스크롤이 visual 섹션 범위에 들어오면 초기화
-        if (window.scrollY >= visualTop && window.scrollY < visualTop + visualHeight) {
-          window.scrollTo(0, 0); // scrollY 값을 0으로 초기화
-          mainNav.classList.remove('on'); 
-        }
-      });
-    </script>
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollToPlugin.min.js"></script>
