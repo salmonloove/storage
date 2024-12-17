@@ -63,50 +63,50 @@
         <a href="#" class="prev"><img src="./img/prev.png" alt=""></a>
         <a href="#" class="next"><img src="./img/next.png" alt=""></a>
     </div>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="./jquery.mCustomScrollbar.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script>
-        $("article").mCustomScrollbar({
-            theme: "minimal-dark",
-        });
-        $("article").on("mouseleave", function(){
-            $(this).mCustomScrollbar("scrollTo", "0")
-        });
-        let cnt = 0
-        $('a.prev').click(function () {
-            cnt--
-            console.log(cnt)
-             if (cnt <= 0) {
-                $('a.prev').fadeOut()
-                $("section").animate({ left: "0" });
-            } else {
-                $('section').animate({ 'left': '+=380' })
-            }  
-        })
-        $('a.next').click(function () {
-            $('a.prev').fadeIn()
-            cnt++
-            console.log(cnt)
-            if (cnt == 5) {
-                // $('a.next').fadeOut()
-                $('section').stop().animate({ 'left': '+=180' }, function(){
-                    $("section").stop().animate({ left: "0" });
-                    // $('a.next').fadeIn()
-                })
-                 cnt = 0; //변수값 초기화 코드//              
-            } else {
-                $('section').animate({ 'left': '-=380' })
-            }    
-        })
-        // cnt 0 ~ 5
-        // $('nav > li').click(function(){
-        //     const index = $(this).index(); // Get index of clicked nav item
-        //     cnt = index; // Update cnt to match the index
-        //     console.log(cnt);
-        
-        // // Animate section to the appropriate position
-        //     $('section').animate({ left: -380 * cnt });
-        // })
+            $("article").mCustomScrollbar({
+                theme: "minimal-dark",
+            });
+            $("article").on("mouseleave", function(){
+                $(this).mCustomScrollbar("scrollTo", "0")
+            });
+            let cnt = 0
+            $('a.prev').click(function () {
+                cnt--
+                console.log(cnt)
+                 if (cnt <= 0) {
+                    $('a.prev').fadeOut()
+                    $("section").animate({ left: "0" });
+                } else {
+                    $('section').animate({ 'left': '+=380' })
+                }  
+            })
+            $('a.next').click(function () {
+                $('a.prev').fadeIn()
+                cnt++
+                console.log(cnt)
+                if (cnt == 5) {
+                    // $('a.next').fadeOut()
+                    $('section').stop().animate({ 'left': '+=180' }, function(){
+                        $("section").stop().animate({ left: "0" });
+                        // $('a.next').fadeIn()
+                    })
+                     cnt = 0; //변수값 초기화 코드//              
+                } else {
+                    $('section').animate({ 'left': '-=380' })
+                }    
+            })
+            // cnt 0 ~ 5
+            // $('nav > li').click(function(){
+            //     const index = $(this).index(); // Get index of clicked nav item
+            //     cnt = index; // Update cnt to match the index
+            //     console.log(cnt);
+            
+            // // Animate section to the appropriate position
+            //     $('section').animate({ left: -380 * cnt });
+            // })
     </script>
 </body>
 </html>
