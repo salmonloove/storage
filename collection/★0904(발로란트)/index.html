@@ -66,10 +66,10 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="./jquery.mCustomScrollbar.js"></script>
     <script>
-        $("article").mCustomScrollbar({
+        $('article').mCustomScrollbar({
             theme: "minimal-dark",
         });
-        $("article").on("mouseleave", function(){
+        $('article').on("mouseleave", function(){
             $(this).mCustomScrollbar("scrollTo", "0")
         });
         let cnt = 0
@@ -99,14 +99,14 @@
             }    
         })
         // cnt 0 ~ 5
-        $('nav > li').click(function(){
-            const index = $(this).index(); // Get index of clicked nav item
-            cnt = index; // Update cnt to match the index
-            console.log(cnt);
+        // $('nav > li').click(function(){
+        //     const index = $(this).index(); // Get index of clicked nav item
+        //     cnt = index; // Update cnt to match the index
+        //     console.log(cnt);
         
-        // Animate section to the appropriate position
-            $('section').animate({ left: -380 * cnt });
-        })
+        // // Animate section to the appropriate position
+        //     $('section').animate({ left: -380 * cnt });
+        // })
     </script>
 </body>
 </html>
