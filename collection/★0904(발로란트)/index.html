@@ -66,51 +66,50 @@
     <script src="./jquery.mCustomScrollbar.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script>
+
         $(document).ready(function () {
-            $("article").mCustomScrollbar({
-                theme: "minimal-dark",
-            });
-            $("article").on("mouseleave", function(){
-                $(this).mCustomScrollbar("scrollTo", "0")
-            });
-            let cnt = 0;
-            const maxCnt = 5; // Maximum count
-            const slideWidth = 380; // Slide width
-            const $section = $("section");
-    
-            // Prev button click
-            $("a.prev").click(function () {
+            let cnt = 0; // 현재 슬라이드 위치를 나타내는 변수
+            const maxCnt = $("article").length - 1; // 슬라이드 최대 개수
+            const slideWidth = 380; // 슬라이드 한 개의 너비
+            const $section = $("section"); // 슬라이드 컨테이너
+        
+            // Prev 버튼 초기 상태
+            $("a.prev").hide();
+        
+            // Prev 버튼 클릭 이벤트
+            $("a.prev").click(function (e) {
+                e.preventDefault();
                 if (cnt > 0) {
                     cnt--;
-                    console.log("Prev clicked, cnt:", cnt);
-    
-                    if (cnt === 0) {
-                        $("a.prev").fadeOut();
-                    }
-                    $section.animate({ left: `+=${slideWidth}` });
+                    $section.animate({ left: `-${cnt * slideWidth}px` }, 500); // 이전 슬라이드로 이동
+                    $("a.next").fadeIn(); // Next 버튼 표시
+                }
+                if (cnt === 0) {
+                    $("a.prev").fadeOut(); // Prev 버튼 숨기기
                 }
             });
-    
-            // Next button click
-            $("a.next").click(function () {
+        
+            // Next 버튼 클릭 이벤트
+            $("a.next").click(function (e) {
+                e.preventDefault();
                 if (cnt < maxCnt) {
                     cnt++;
-                    console.log("Next clicked, cnt:", cnt);
-    
-                    if (cnt > 0) {
-                        $("a.prev").fadeIn();
-                    }
-    
-                    $section.animate({ left: `-=${slideWidth}` });
-                    if (cnt === maxCnt) {
-                        cnt = 0; // Reset counter
-                        setTimeout(function () {
-                            $section.animate({ left: "0" });
-                        }, 500); // Delay for smooth transition
-                    }
+                    $section.animate({ left: `-${cnt * slideWidth}px` }, 500); // 다음 슬라이드로 이동
+                    $("a.prev").fadeIn(); // Prev 버튼 표시
+                }
+                if (cnt === maxCnt) {
+                    $("a.next").fadeOut(); // Next 버튼 숨기기
                 }
             });
         });
+            // $("article").mCustomScrollbar({
+            //     theme: "minimal-dark",
+            // });
+            // $("article").on("mouseleave", function(){
+            //     $(this).mCustomScrollbar("scrollTo", "0")
+            // });
+            // let cnt = 0;
+            
             // $('a.prev').click(function () {
             //     cnt--
             //     console.log(cnt)
@@ -136,6 +135,9 @@
             //         $('section').animate({ 'left': '-=380' })
             //     }    
             // })
+
+
+        
             // cnt 0 ~ 5
             // $('nav > li').click(function(){
             //     const index = $(this).index(); // Get index of clicked nav item
