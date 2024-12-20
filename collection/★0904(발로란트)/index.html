@@ -72,32 +72,69 @@
             $("article").on("mouseleave", function(){
                 $(this).mCustomScrollbar("scrollTo", "0")
             });
-            let cnt = 0
-            $('a.prev').click(function () {
-                cnt--
-                console.log(cnt)
-                 if (cnt <= 0) {
-                    $('a.prev').fadeOut()
-                    $("section").animate({ left: "0" });
-                } else {
-                    $('section').animate({ 'left': '+=380' })
-                }  
-            })
-            $('a.next').click(function () {
-                $('a.prev').fadeIn()
-                cnt++
-                console.log(cnt)
-                if (cnt == 5) {
-                    // $('a.next').fadeOut()
-                    $('section').stop().animate({ 'left': '+=180' }, function(){
-                        $("section").stop().animate({ left: "0" });
-                        // $('a.next').fadeIn()
-                    })
-                     cnt = 0; //변수값 초기화 코드//              
-                } else {
-                    $('section').animate({ 'left': '-=380' })
-                }    
-            })
+            let cnt = 0;
+            const maxCnt = 5; // Maximum count
+            const slideWidth = 380; // Slide width
+            const $section = $("section");
+    
+            // Prev button click
+            $("a.prev").click(function () {
+                if (cnt > 0) {
+                    cnt--;
+                    console.log("Prev clicked, cnt:", cnt);
+    
+                    if (cnt === 0) {
+                        $("a.prev").fadeOut();
+                    }
+                    $section.animate({ left: `+=${slideWidth}` });
+                }
+            });
+    
+            // Next button click
+            $("a.next").click(function () {
+                if (cnt < maxCnt) {
+                    cnt++;
+                    console.log("Next clicked, cnt:", cnt);
+    
+                    if (cnt > 0) {
+                        $("a.prev").fadeIn();
+                    }
+    
+                    $section.animate({ left: `-=${slideWidth}` });
+                    if (cnt === maxCnt) {
+                        cnt = 0; // Reset counter
+                        setTimeout(function () {
+                            $section.animate({ left: "0" });
+                        }, 500); // Delay for smooth transition
+                    }
+                }
+            });
+        });
+            // $('a.prev').click(function () {
+            //     cnt--
+            //     console.log(cnt)
+            //      if (cnt <= 0) {
+            //         $('a.prev').fadeOut()
+            //         $("section").animate({ left: "0" });
+            //     } else {
+            //         $('section').animate({ 'left': '+=380' })
+            //     }  
+            // })
+            // $('a.next').click(function () {
+            //     $('a.prev').fadeIn()
+            //     cnt++
+            //     console.log(cnt)
+            //     if (cnt == 5) {
+            //         // $('a.next').fadeOut()
+            //         $('section').stop().animate({ 'left': '+=180' }, function(){
+            //             $("section").stop().animate({ left: "0" });
+            //             // $('a.next').fadeIn()
+            //         })
+            //          cnt = 0; //변수값 초기화 코드//              
+            //     } else {
+            //         $('section').animate({ 'left': '-=380' })
+            //     }    
+            // })
             // cnt 0 ~ 5
             // $('nav > li').click(function(){
             //     const index = $(this).index(); // Get index of clicked nav item
